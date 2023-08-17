@@ -1,14 +1,23 @@
 'use client'
 
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./Control.css";
+import { useRouter } from "next/navigation";
 import { AiOutlineLogout } from "react-icons/ai";
 import Inputmodal from "./Inputmodal";
 import Table from "./Table";
 // import { connectDB } from "@utils/database";
 
 const page = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if(!localStorage.getItem('username')){
+      router.push("/Dashboard");
+    }
+  }, [])
+  
 
   const [toggleState, setToggleState] = useState(0)
 

@@ -29,13 +29,13 @@ const Footer = () => {
         </ul>
 
         <div className="footer_social">
-        <Link href ='' target = '_blank' >
+        <Link href ='https://github.com/CodeATM' target = '_blank' >
             <FiGithub className ='footer_social-icon'/>
         </Link>
-        <Link href ='' target = '_blank' >
+        <Link href ='https://twitter.com/MatthewOlu86153?t=sXOxcXoje1QDo0g40K3lfQ&s=09' target = '_blank' >
             <FiTwitter className ='footer_social-icon'/>
         </Link>
-        <Link href ='' target = '_blank'>
+        <Link href ='https://www.linkedin.com/in/awe-oluwatimileyin-936426248' target = '_blank'>
             <AiFillLinkedin className ='footer_social-icon'/>
         </Link>
         </div>

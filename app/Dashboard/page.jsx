@@ -2,7 +2,7 @@
 
 import React from "react";
 import { MdOutlineCancel } from "react-icons/md";
-import { useState } from "react";
+import { useState, useCallback} from "react";
 import { useRouter } from "next/navigation";
 import "./Dashboard.css";
 
@@ -10,12 +10,20 @@ const Inputmodal = ({ toggleTab, toggleState }) => {
   const router = useRouter();
   const [image, setImage] = useState(null);
   const [submitting, setIsSubmitting] = useState(false);
+  const [variant, setVariant] = useState('login')
+
+
+  const toggleVariant = useCallback(() => {
+    setVariant((currentVariant) => currentVariant === 'login'? 'register': 'login')
+  }, [])
+
+
   const [details, setDetails] = useState({
     username: "",
     password: "",
   });
 
-  const createPrompt = async (e) => {
+  const createPromptlogin =useCallback(async (e) => {
     // e.preventDefau
     setIsSubmitting(true);
 
@@ -26,20 +34,51 @@ const Inputmodal = ({ toggleTab, toggleState }) => {
       });
 
       if (response.ok) {
+        localStorage.setItem("username", details.username);
         router.push("/Dashboard/Control");
+        console.log(localStorage)
       }
     } catch (error) {
       console.log(error);
     } finally {
+      alert('You are logged in')
       setIsSubmitting(false);
     }
-  };
+  },[details.email, details.password]);
+
+
+  const createPromptregister =useCallback(async (e) => {
+    // e.preventDefau
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/user/new", {
+        method: "POST",
+        body: JSON.stringify(details),
+      });
+
+      if (response.ok) {
+        localStorage.setItem("username", details.username);
+        router.push("/Dashboard/Control");
+        console.log(localStorage)
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      alert('You are logged in')
+      setIsSubmitting(false);
+    }
+  },[details.email, details.password]);
+
+
 
   return (
     <div className="signIn_container">
       <div className=".signIn_container">
-        <h3 className="signIn_title">Login</h3>
-        <form onSubmit={createPrompt}>
+        <h3 className="signIn_title">
+          {variant === 'login'? 'SignIn' : 'Add an account'}
+        </h3>
+        <form>
           <div className="signIn_form-div">
             <label className="signIn_form-tag">Username</label>
             <input
@@ -69,9 +108,11 @@ const Inputmodal = ({ toggleTab, toggleState }) => {
           </div>
         </form>
 
-        <button onClick={() => createPrompt()} type="submit" className="button">
-          Add Project
+        <button onClick={() => {variant == 'login' ? createPromptlogin() :createPromptregister()  }} type="submit" className="button">
+         {variant === 'login' ? 'sign In': 'Add user'}
         </button>
+
+        <p className="p" onClick = {() => toggleVariant()}>Add Account</p>
       </div>
     </div>
   );

@@ -77,7 +77,6 @@ const Table = ({ toggleTab }) => {
                 <div class="actions">
                   <FiTrash onClick ={() => handleDelete(allPosts._id)}/>
                   <FiCopy />
-                  <span class="las la-ellipsis-v"></span>
                 </div>
               </td>
             </tr>

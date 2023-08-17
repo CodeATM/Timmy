@@ -53,6 +53,9 @@
   margin-bottom: var(--mb-2);
 }
 
+.p{
+  cursor: pointer;
+}
 
 
 
