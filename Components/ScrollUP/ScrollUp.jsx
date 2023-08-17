@@ -1,21 +1,38 @@
-'use client'
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import "./ScrollUp.css";
 
 const ScrollUp = () => {
-  window.addEventListener("scroll", function () {
-    const scrollUp = document.querySelector(".scrollup");
+  const [showScroll, setShowScroll] = useState(false);
 
-    if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-    else scrollUp.classList.remove("show-scroll");
-  });
+  const handleScroll = () => {
+    if (window.scrollY >= 560) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <a href="#" className="scrollup">
+    <div
+      className={`scrollup ${showScroll ? "show-scroll" : ""}`}
+      onClick={scrollToTop}
+    >
       <AiOutlineArrowUp className="scrollup_icon" />
-    </a>
+    </div>
   );
 };
 
 export default ScrollUp;
+
