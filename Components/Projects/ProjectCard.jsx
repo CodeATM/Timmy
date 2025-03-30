@@ -22,16 +22,6 @@ const ProjectCard = ({
             height={300}
             className="project_img"
           />
-          <div className="project_overlay">
-            <div className="project_links">
-              <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project_link">
-                <FiGithub />
-              </a>
-              <a href={liveLink} target="_blank" rel="noopener noreferrer" className="project_link">
-                <FiExternalLink />
-              </a>
-            </div>
-          </div>
         </div>
       )}
 

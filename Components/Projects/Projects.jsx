@@ -7,10 +7,10 @@ import ProjectCard from "./ProjectCard";
 const frontendProjects = [
   {
     id: 1,
-    title: "Cloudinary Uploader",
+    title: "Cloudz",
     description:
-      "Cloudinary upoader is a modern and small scale version od Google drive which offers the service of uploading images and creating a shareable link for sharing and future download.",
-    image: "/assets/project1.jpg",
+      "Cloudz is a modern and small scale version od Google drive which offers the service of uploading images and creating a shareable link for sharing and future download.",
+    image: "/assets/uploader.png",
     technologies: [
       "React",
       "Next.js",
@@ -19,15 +19,15 @@ const frontendProjects = [
       "Api integration",
       "Redux",
     ],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://cloudz-three.vercel.app/",
+    githubLink: "https://github.com/CodeATM/cloudinary-uploader",
   },
   {
     id: 2,
     title: "PicFinder",
     description:
       "PIcFinder is an application built on the unsplash api. It include feature such as search for both images and images colection. ",
-    image: "/assets/project2.jpg",
+    image: "/assets/picFinder.png",
     technologies: [
       "React",
       "Tailwind css",
@@ -35,25 +35,25 @@ const frontendProjects = [
       "NextJS",
       "Javascript",
     ],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://picture-finder.vercel.app/",
+    githubLink: "https://github.com/CodeATM/PictureFinder",
   },
   {
     id: 3,
     title: "PDSign",
     description:
       "This is a tools that hepls to anotate a document such as adding highlight, underline, signature. it also has a feature of exporting the anotated document.",
-    image: "/assets/project1.jpg",
+    image: "/assets/Annotation.png",
     technologies: ["React", "Next.js", "Tailwind Css", "Typescript"],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://pdf-annotator-orcin.vercel.app/",
+    githubLink: "https://github.com/CodeATM/Pdf-Annotator",
   },
   {
     id: 4,
     title: "Voyage",
     description:
       "Voyage is a vacation website landing page that shows the vacation listing of the company with nice and cool animation. It is built with GSAP for motion for nice motion.",
-    image: "/assets/project2.jpg",
+    image: "/assets/voyage.png",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -61,10 +61,9 @@ const frontendProjects = [
       "Typescript",
       "NextJS",
     ],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://voyage-pi.vercel.app/",
+    githubLink: "https://github.com/CodeATM/Voyage",
   },
-  // Add more frontend projects...
 ];
 
 const backendProjects = [
@@ -74,8 +73,8 @@ const backendProjects = [
     description:
       "This is an eccommerce api built with nodejs to handle the datafow of an ecomerce platform. IT also offer the features such as Payment, Analytics, Authentication with OAuth2.0.",
     technologies: ["Node.js", "Express", "Redis", "MongoDB", "Stripe"],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://ecommerce-api-oe5e.onrender.com",
+    githubLink: "https://github.com/CodeATM/Ecommerce-Api",
   },
   {
     id: 2,
@@ -90,8 +89,8 @@ const backendProjects = [
       "Paystack",
       "OAuth",
     ],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://ajo-m7gy.onrender.com",
+    githubLink: "https://github.com/CodeATM/Ajo",
   },
   {
     id: 3,
@@ -99,25 +98,25 @@ const backendProjects = [
     description:
       "This is an API Built to handle crud operation for a note keeping app. it is bulit Using GOlang and POstgresSQL",
     technologies: ["Golang", "GOfiber", "Redis", "PostgresSQL"],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    liveLink: "https://go-notepal.onrender.com",
+    githubLink: "https://github.com/CodeATM/go-notepal",
   },
   {
     id: 4,
     title: "Artistic",
     description:
       "Artistic API was built to handle backend operations of a story writing application.IT offers features such as like, comment,  folllowing etc. It is built to handle robust story like wattpad with chapters for each ",
-      technologies: ["Node.js", "Express", "Redis", "MongoDB"],
-    liveLink: "https://project.com",
-    githubLink: "https://github.com/project",
+    technologies: ["Node.js", "Express", "Redis", "MongoDB"],
+    liveLink: "https://artistic-7k0f.onrender.com",
+    githubLink: "https://github.com/CodeATM/Artistic",
   },
   {
-    id: 4,
-    title: "Artistic",
+    id: 5,
+    title: "SocioME",
     description:
-      "This is an API Built to handle crud operation for a note keeping app. it is bulit Using GOlang and POstgresSQL",
-    technologies: ["Golang", "GOfiber", "Redis", "PostgresSQL"],
-    liveLink: "https://project.com",
+      "SocioMe is an online social media platform that is built with NodeJS, expressJS, Mongodb. It allows user to like, Follow, create feeds, add comment etc.",
+    technologies: ["NodeJs", "ExpressJS", "MongoDB"],
+    liveLink: "",
     githubLink: "https://github.com/project",
   },
 ];

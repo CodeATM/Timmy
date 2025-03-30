@@ -30,7 +30,10 @@ const Service = () => {
           </div>
 
           <div className="service-button-component">
-            <a href="" download="">
+            <a
+              href="/assets/Awe-oluwatimileyin-Fr.pdf"
+              download="AweOLuwatimileyin-CV.pdf"
+            >
               <span className="service_button">
                 Download CV
                 <DownloadButton />
@@ -95,7 +98,10 @@ const Service = () => {
           </div>
 
           <div className="service-button-component">
-            <a href="" download="">
+            <a
+              href="/assets/Awe-oluwatimileyin-Fr.pdf"
+              download="AweOLuwatimileyin-CV.pdf"
+            >
               <span className="service_button">
                 Download CV
                 <DownloadButton />
@@ -161,7 +167,7 @@ const Service = () => {
           </div>
 
           <div className="service-button-component">
-            <a href="" download="">
+            <a href="/assets/your-cv-filename.pdf" download="YourName-CV.pdf">
               <span className="service_button">
                 Download CV
                 <DownloadButton />

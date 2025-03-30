@@ -14,7 +14,7 @@ const WorkExperience = ({ experiences }) => {
               <span className="work_duration">{exp.duration}</span>
             </div>
           </div>
-          <ul className="">
+          <ul className="work_list">
             {exp.descriptions.map((ex, i) => (
               <li className="" key={i}>
                 {ex}
