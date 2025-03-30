@@ -9,6 +9,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
+    border-radius: 8px;
 }
 
 .service_icon{
@@ -33,13 +34,22 @@
     cursor: pointer;
 }
 
+.service-button-component{
+    color: var(--title-color);
+    font-size: var(--smaller-font-size);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.85rem;
+    cursor: pointer;
+}
+
 .service_button-icon{
     font-size: 1rem;
     transition: .3s;
 }
 
 .service_button:hover, .service_button-icon{
-    transform: translateX(00.25rem);
+    transform: translateX(00.1rem);
 }
 .service_modal{
     position: fixed;
@@ -132,6 +142,14 @@
     }
     .service_icon{
         font-size: 1.5rem;
+    }
+    .service-button-component{
+        color: var(--title-color);
+        font-size: var(--smaller-font-size);
+        display: inline-block;
+        align-items: center;
+        column-gap: 0.85rem;
+        cursor: pointer;
     }
   }
   

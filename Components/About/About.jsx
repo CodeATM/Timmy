@@ -15,8 +15,8 @@ const About = () => {
         <Image
           src={img}
           alt="about Image"
-          width={320}
-          height={320}
+          width={370}
+          height={370}
           className="about_img"
         />
 
@@ -24,15 +24,14 @@ const About = () => {
           <Info />
 
           <p className="about_description">
-            Hey there! I'm Timmy, a dedicated web developer fueled by a passion
-            for crafting captivating online experiences. With a fusion of design
-            finesse and coding wizardry, I transform ideas into pixel-perfect
-            realities. From sleek interfaces to seamless functionalities, I
-            thrive on turning concepts into immersive digital wonders. Let's
-            collaborate and bring your digital dreams to life!
+            Hi, I'm Timmy, a software developer focused on building robust and scalable web solutions. 
+            I bridge the gap between innovative design and technical excellence, crafting applications 
+            that not only meet business objectives but exceed user expectations. With expertise in 
+            modern web technologies and a commitment to clean, maintainable code, I specialize in 
+            turning complex requirements into intuitive digital experiences.
           </p>
 
-          <a href="" download="" className="button button--flex">
+          {/* <a href="" download="" className="button button--flex">
             Download CV
             <svg
               className="button__icon"
@@ -59,7 +58,7 @@ const About = () => {
                 fill="var(--container-color)"
               ></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

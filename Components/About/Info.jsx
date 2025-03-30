@@ -15,7 +15,7 @@ const Info = () => {
       <div className="about_box">
         <BiSupport className='about_icon'/>
         <h3 className="about_title">Completed</h3>
-        <span className="about_subtitle">48+ Project</span>
+        <span className="about_subtitle">16+ Project</span>
       </div>
 
       <div className="about_box">

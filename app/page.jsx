@@ -6,8 +6,9 @@ import Skills from "../Components/Skills/Skills";
 import Service from "../Components/Services/Service";
 import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
-import ScrollUp from '../Components/ScrollUP/ScrollUp'
-import Works from '../Components/Works/Works'
+import ScrollUp from "../Components/ScrollUP/ScrollUp";
+import Works from "../Components/Works/Works";
+import Projects from "@Components/Projects/Projects";
 
 const page = () => {
   return (
@@ -18,11 +19,12 @@ const page = () => {
         <About />
         <Skills />
         <Service />
-        <Works/>
+        <Projects />
+        <Works />
         <Contact />
       </main>
       <Footer />
-      <ScrollUp/>
+      <ScrollUp />
     </div>
   );
 };

@@ -2,81 +2,37 @@ import React from "react";
 import { FiAward } from "react-icons/fi";
 
 const Frontend = () => {
+  const backendSkills = [
+    { name: "HTML", level: "Intermediate" },
+    { name: "CSS", level: "Intermediate" },
+    { name: "Tailwind CSS", level: "Intermediate" },
+    { name: "Javascript", level: "Advanced" },
+    { name: "Typescript", level: "Basic" },
+    { name: "ReactJS", level: "Basic" },
+    { name: "NextJS", level: "" },
+    { name: "Redux", level: "Basic" },
+    { name: "VueJS", level: "Intermediate" },
+    { name: "Material UI", level: "Basic" },
+    { name: "API Integration", level: "Intermediate" },
+    { name: "GSAP", level: "Intermediate" },
+    { name: "Framer", level: "Basic" },
+  ];
   return (
     <div className="skills_content">
-      <h3 className="skills_title">Frontend Developer</h3>
+      <h3 className="skills_title">Backend Development</h3>
 
       <div className="skills_box">
-      <div className="skills_group">
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">HTML</h3>
-            <span className="skills_level">Advance</span>
-          </div>
+        <div className="skills_group">
+          {backendSkills.map((skill) => (
+            <div className="skills_data">
+              <FiAward className="skill_icon" />
+              <div className="">
+                <h3 className="skills_name">{skill.name}</h3>
+                <span className="skills_level">Advance</span>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">CSS</h3>
-            <span className="skills_level">Advance</span>
-          </div>
-        </div>
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">Tailwind CSS</h3>
-            <span className="skills_level">Advance</span>
-          </div>
-        </div>
-
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">Javascript</h3>
-            <span className="skills_level">Advance</span>
-          </div>
-        </div>
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">NextJS</h3>
-            <span className="skills_level">Intermidate</span>
-          </div>
-        </div>
-      </div>
-      <div className="skills_group">
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">ReactJS</h3>
-            <span className="skills_level">Advance</span>
-          </div>
-        </div>
-
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">Material UI</h3>
-            <span className="skills_level">intermediate</span>
-          </div>
-        </div>
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">Bootstrap</h3>
-            <span className="skills_level">Basics</span>
-          </div>
-        </div>
-        <div className="skills_data">
-          <FiAward className="skill_icon" />
-          <div className="">
-            <h3 className="skills_name">Rest API</h3>
-            <span className="skills_level">Intermediate</span>
-          </div>
-        </div>
-      </div>
       </div>
     </div>
   );
